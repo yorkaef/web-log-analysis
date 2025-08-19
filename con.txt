@@ -1,0 +1,5 @@
+hdfs namenode -format
+start-yarn.sh
+start-dfs.sh
+jps
+source venv/bin/activate
