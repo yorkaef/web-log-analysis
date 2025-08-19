@@ -1,0 +1,24 @@
+Estadísticas del dataset EClog
+Generado: 2025-08-18 17:24:48.041906
+Registros totales: 350683
+IPs únicas: 4297
+Usuarios únicos: 1
+Período: 1990-03-11 00:42:36 a 1990-03-11 00:56:59.990000
+Métodos HTTP:
+HttpMethod
+GET     288556
+POST     62075
+HEAD        43
+-            9
+Códigos de respuesta:
+ResponseCode
+200    338043
+304      6847
+301      3387
+302      1471
+499       388
+404       307
+206       150
+403        72
+400        11
+408         7

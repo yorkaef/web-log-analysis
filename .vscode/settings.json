@@ -1,0 +1,15 @@
+{
+    "python.defaultInterpreterPath": "/usr/bin/python3",
+    "python.terminal.activateEnvironment": false,
+    "files.exclude": {
+        "**/.git": true,
+        "**/__pycache__": true,
+        "**/node_modules": true,
+        "logs/hadoop-*.log": true
+    },
+    "files.associations": {
+        "*.hql": "sql",
+        "*.tsv": "csv"
+    },
+    "terminal.integrated.defaultProfile.linux": "bash"
+}

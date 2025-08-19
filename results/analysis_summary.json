@@ -1,0 +1,30 @@
+{
+  "generated_at": "2025-08-18T17:27:54.647725",
+  "stats": {
+    "total_records": 350683,
+    "unique_ips": 4297,
+    "unique_users": 1,
+    "date_range": {
+      "start": "1990-03-11 00:42:36.000",
+      "end": "1990-03-11 00:56:59.990"
+    },
+    "success_rate": 99.77615111083229,
+    "error_rate": 0.22384888916770987,
+    "total_bytes": "4279087729",
+    "avg_response_size": 12202.153309399087,
+    "http_methods": {
+      "GET": 288556,
+      "POST": 62075,
+      "HEAD": 43,
+      "-": 9
+    }
+  },
+  "visualizations": [
+    "hourly_traffic",
+    "top_countries",
+    "response_codes",
+    "bots_vs_humans",
+    "activity_heatmap"
+  ],
+  "report_file": "/home/kiper/web-log-analysis/results/final_report.html"
+}

@@ -1,0 +1,49 @@
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/hive/lib/log4j-slf4j-impl-2.17.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/kiper/hadoop/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+Hive Session ID = 47a3792f-8f52-44d4-be62-2e2fa723e7d3
+
+Logging initialized using configuration in jar:file:/opt/hive/lib/hive-common-3.1.3.jar!/hive-log4j2.properties Async: true
+Hive Session ID = 7602487f-7de2-4389-ab70-4bf54ce0c8ed
+OK
+Time taken: 1.332 seconds
+OK
+Time taken: 0.022 seconds
+OK
+Time taken: 0.081 seconds
+NoViableAltException(309@[2389:1: columnNameTypeOrConstraint : ( ( tableConstraint ) | ( columnNameTypeConstraint ) );])
+	at org.antlr.runtime.DFA.noViableAlt(DFA.java:158)
+	at org.antlr.runtime.DFA.predict(DFA.java:116)
+	at org.apache.hadoop.hive.ql.parse.HiveParser.columnNameTypeOrConstraint(HiveParser.java:34044)
+	at org.apache.hadoop.hive.ql.parse.HiveParser.columnNameTypeOrConstraintList(HiveParser.java:29840)
+	at org.apache.hadoop.hive.ql.parse.HiveParser.createTableStatement(HiveParser.java:6662)
+	at org.apache.hadoop.hive.ql.parse.HiveParser.ddlStatement(HiveParser.java:4295)
+	at org.apache.hadoop.hive.ql.parse.HiveParser.execStatement(HiveParser.java:2494)
+	at org.apache.hadoop.hive.ql.parse.HiveParser.statement(HiveParser.java:1420)
+	at org.apache.hadoop.hive.ql.parse.ParseDriver.parse(ParseDriver.java:220)
+	at org.apache.hadoop.hive.ql.parse.ParseUtils.parse(ParseUtils.java:74)
+	at org.apache.hadoop.hive.ql.parse.ParseUtils.parse(ParseUtils.java:67)
+	at org.apache.hadoop.hive.ql.Driver.compile(Driver.java:616)
+	at org.apache.hadoop.hive.ql.Driver.compileInternal(Driver.java:1826)
+	at org.apache.hadoop.hive.ql.Driver.compileAndRespond(Driver.java:1773)
+	at org.apache.hadoop.hive.ql.Driver.compileAndRespond(Driver.java:1768)
+	at org.apache.hadoop.hive.ql.reexec.ReExecDriver.compileAndRespond(ReExecDriver.java:126)
+	at org.apache.hadoop.hive.ql.reexec.ReExecDriver.run(ReExecDriver.java:214)
+	at org.apache.hadoop.hive.cli.CliDriver.processLocalCmd(CliDriver.java:239)
+	at org.apache.hadoop.hive.cli.CliDriver.processCmd(CliDriver.java:188)
+	at org.apache.hadoop.hive.cli.CliDriver.processLine(CliDriver.java:402)
+	at org.apache.hadoop.hive.cli.CliDriver.processLine(CliDriver.java:335)
+	at org.apache.hadoop.hive.cli.CliDriver.processReader(CliDriver.java:471)
+	at org.apache.hadoop.hive.cli.CliDriver.processFile(CliDriver.java:487)
+	at org.apache.hadoop.hive.cli.CliDriver.executeDriver(CliDriver.java:793)
+	at org.apache.hadoop.hive.cli.CliDriver.run(CliDriver.java:759)
+	at org.apache.hadoop.hive.cli.CliDriver.main(CliDriver.java:683)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.util.RunJar.run(RunJar.java:328)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:241)
+FAILED: ParseException line 5:4 cannot recognize input near 'timestamp' 'STRING' ',' in column name or constraint
