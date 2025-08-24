@@ -1,5 +1,5 @@
 #en powershek 
-cd web-log-analysis
+cd ~/web-log-analysis
 code .
 
 #paso 2
