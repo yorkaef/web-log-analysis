@@ -1,3 +1,8 @@
+#en powershek 
+cd web-log-analysis
+code .
+
+#paso 2
 hdfs namenode -format
 start-yarn.sh
 start-dfs.sh
