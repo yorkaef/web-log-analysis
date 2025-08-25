@@ -8,3 +8,4 @@ start-yarn.sh
 start-dfs.sh
 jps
 source venv/bin/activate
+./run_complete_analysis.sh para ejecutar
