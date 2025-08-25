@@ -1,29 +1,11 @@
 #!/usr/bin/env python3
 """
-Mapper para contar visitas por país
-Input: TSV con columnas del dataset EClog
+Mapper simple para contar visitas por país
+Input: TSV EClog con columna Country
 Output: país \t 1
 """
 import sys
 
-def get_country_from_ip(ip):
-    """Clasificación simple de país por IP"""
-    if ip.startswith('192.168') or ip.startswith('10.') or ip.startswith('172.'):
-        return 'Local'
-    elif ip.startswith(('203.', '210.', '202.', '124.')):
-        return 'Asia-Pacific'
-    elif ip.startswith(('91.', '85.', '94.', '88.')):
-        return 'Europe'
-    elif ip.startswith(('198.', '199.', '208.', '204.')):
-        return 'North-America'
-    elif ip.startswith(('200.', '201.', '186.')):
-        return 'South-America'
-    elif ip.startswith(('196.', '197.', '41.')):
-        return 'Africa'
-    else:
-        return 'Unknown'
-
-# Procesar header (primera línea)
 first_line = True
 
 for line in sys.stdin:
@@ -39,10 +21,34 @@ for line in sys.stdin:
     
     try:
         fields = line.split('\t')
-        if len(fields) >= 10:  # Verificar que tenemos todas las columnas
-            ip_id = fields[0]  # IpId es la primera columna
-            country = get_country_from_ip(ip_id)
+        if len(fields) >= 18:  # Verificar que tenemos todas las columnas
+            country = fields[17].strip()  # Country es la columna 17 (índice 17)
+            
+            # Si el país está como "Unknown", intentar inferir del IpId
+            if country == "Unknown" or not country:
+                ip_id = fields[0].strip()  # IpId es la primera columna
+                
+                # Extraer código de país del IpId (formato: número + código)
+                import re
+                match = re.search(r'([A-Z]{2})$', ip_id.upper())
+                
+                if match:
+                    country_code = match.group(1)
+                    country_mapping = {
+                        'PL': 'Poland',
+                        'US': 'United States', 
+                        'DE': 'Germany',
+                        'CA': 'Canada',
+                        'NL': 'Netherlands',
+                        'GB': 'United Kingdom',
+                        'FR': 'France'
+                    }
+                    country = country_mapping.get(country_code, f'Other-{country_code}')
+                else:
+                    country = 'Unknown'
+            
             print(f"{country}\t1")
-    except Exception as e:
+            
+    except Exception:
         # Ignorar líneas malformadas
         continue

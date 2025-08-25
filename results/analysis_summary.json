@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-08-18T17:27:54.647725",
+  "generated_at": "2025-08-25T00:27:52.830981",
   "stats": {
     "total_records": 350683,
     "unique_ips": 4297,
@@ -19,12 +19,31 @@
       "-": 9
     }
   },
+  "mapreduce_results_loaded": [
+    "country",
+    "hourly",
+    "frequent_ips",
+    "errors"
+  ],
+  "hive_results_loaded": [
+    "hive_country",
+    "hive_hourly",
+    "hive_ips",
+    "hive_errors",
+    "hive_executive",
+    "hive_advanced"
+  ],
   "visualizations": [
-    "hourly_traffic",
     "top_countries",
+    "hourly_traffic",
+    "top_ips",
     "response_codes",
-    "bots_vs_humans",
     "activity_heatmap"
   ],
-  "report_file": "/home/kiper/web-log-analysis/results/final_report.html"
+  "report_file": "/home/kiper/web-log-analysis/results/final_report.html",
+  "data_sources": {
+    "local_data": true,
+    "mapreduce": true,
+    "hive": true
+  }
 }

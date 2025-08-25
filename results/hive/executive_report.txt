@@ -3,111 +3,400 @@ SLF4J: Found binding in [jar:file:/opt/hive/lib/log4j-slf4j-impl-2.17.1.jar!/org
 SLF4J: Found binding in [jar:file:/home/kiper/hadoop/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
 SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
-Hive Session ID = 8df85e29-8919-4efd-a997-8b1e2745f058
+Hive Session ID = f5d71ace-c7f6-451d-907a-c8e2ecb1d7f9
 
 Logging initialized using configuration in jar:file:/opt/hive/lib/hive-common-3.1.3.jar!/hive-log4j2.properties Async: true
-Hive Session ID = 1deca2aa-9c23-4ec9-a09e-746efd960e45
+Hive Session ID = e04e9cec-1745-4365-9794-b49d3db73f3d
 OK
-Time taken: 0.719 seconds
+Time taken: 0.606 seconds
 OK
 === REPORTE EJECUTIVO EClog ===
-Time taken: 3.01 seconds, Fetched: 1 row(s)
-NoViableAltException(374@[423:1: atomExpression : ( constant | ( intervalExpression )=> intervalExpression | castExpression | extractExpression | floorExpression | caseExpression | whenExpression | ( subQueryExpression )=> ( subQueryExpression ) -> ^( TOK_SUBQUERY_EXPR TOK_SUBQUERY_OP subQueryExpression ) | ( functionName LPAREN )=> function | tableOrColumn | expressionsInParenthesis[true, false] );])
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser$DFA36.specialStateTransition(HiveParser_IdentifiersParser.java:34559)
-	at org.antlr.runtime.DFA.predict(DFA.java:80)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.atomExpression(HiveParser_IdentifiersParser.java:6930)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceFieldExpression(HiveParser_IdentifiersParser.java:7172)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceUnaryPrefixExpression(HiveParser_IdentifiersParser.java:7671)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceUnarySuffixExpression(HiveParser_IdentifiersParser.java:7727)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceBitwiseXorExpression(HiveParser_IdentifiersParser.java:7889)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceStarExpression(HiveParser_IdentifiersParser.java:8032)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedencePlusExpression(HiveParser_IdentifiersParser.java:8175)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceConcatenateExpression(HiveParser_IdentifiersParser.java:8314)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceAmpersandExpression(HiveParser_IdentifiersParser.java:8524)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceBitwiseOrExpression(HiveParser_IdentifiersParser.java:8661)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceSimilarExpressionMain(HiveParser_IdentifiersParser.java:9144)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceSimilarExpression(HiveParser_IdentifiersParser.java:9040)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceEqualExpression(HiveParser_IdentifiersParser.java:10254)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceNotExpression(HiveParser_IdentifiersParser.java:10541)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceAndExpression(HiveParser_IdentifiersParser.java:10650)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceOrExpression(HiveParser_IdentifiersParser.java:10791)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.expression(HiveParser_IdentifiersParser.java:6870)
-	at org.apache.hadoop.hive.ql.parse.HiveParser.expression(HiveParser.java:45188)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_SelectClauseParser.selectExpression(HiveParser_SelectClauseParser.java:2296)
-	at org.apache.hadoop.hive.ql.parse.HiveParser.selectExpression(HiveParser.java:45128)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.function(HiveParser_IdentifiersParser.java:3581)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.atomExpression(HiveParser_IdentifiersParser.java:7081)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceFieldExpression(HiveParser_IdentifiersParser.java:7172)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceUnaryPrefixExpression(HiveParser_IdentifiersParser.java:7671)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceUnarySuffixExpression(HiveParser_IdentifiersParser.java:7727)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceBitwiseXorExpression(HiveParser_IdentifiersParser.java:7889)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceStarExpression(HiveParser_IdentifiersParser.java:8032)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedencePlusExpression(HiveParser_IdentifiersParser.java:8175)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceConcatenateExpression(HiveParser_IdentifiersParser.java:8314)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceAmpersandExpression(HiveParser_IdentifiersParser.java:8524)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceBitwiseOrExpression(HiveParser_IdentifiersParser.java:8661)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceSimilarExpressionMain(HiveParser_IdentifiersParser.java:9144)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceSimilarExpression(HiveParser_IdentifiersParser.java:9040)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceEqualExpression(HiveParser_IdentifiersParser.java:10254)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceNotExpression(HiveParser_IdentifiersParser.java:10541)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceAndExpression(HiveParser_IdentifiersParser.java:10650)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceOrExpression(HiveParser_IdentifiersParser.java:10791)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.expression(HiveParser_IdentifiersParser.java:6870)
-	at org.apache.hadoop.hive.ql.parse.HiveParser.expression(HiveParser.java:45188)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_SelectClauseParser.selectExpression(HiveParser_SelectClauseParser.java:2296)
-	at org.apache.hadoop.hive.ql.parse.HiveParser.selectExpression(HiveParser.java:45128)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.function(HiveParser_IdentifiersParser.java:3581)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.atomExpression(HiveParser_IdentifiersParser.java:7081)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceFieldExpression(HiveParser_IdentifiersParser.java:7172)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceUnaryPrefixExpression(HiveParser_IdentifiersParser.java:7671)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceUnarySuffixExpression(HiveParser_IdentifiersParser.java:7727)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceBitwiseXorExpression(HiveParser_IdentifiersParser.java:7889)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceStarExpression(HiveParser_IdentifiersParser.java:8032)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedencePlusExpression(HiveParser_IdentifiersParser.java:8175)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceConcatenateExpression(HiveParser_IdentifiersParser.java:8314)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceAmpersandExpression(HiveParser_IdentifiersParser.java:8524)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceBitwiseOrExpression(HiveParser_IdentifiersParser.java:8661)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceSimilarExpressionMain(HiveParser_IdentifiersParser.java:9144)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceSimilarExpression(HiveParser_IdentifiersParser.java:9040)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceEqualExpression(HiveParser_IdentifiersParser.java:10254)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceNotExpression(HiveParser_IdentifiersParser.java:10541)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceAndExpression(HiveParser_IdentifiersParser.java:10650)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceOrExpression(HiveParser_IdentifiersParser.java:10791)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.expression(HiveParser_IdentifiersParser.java:6870)
-	at org.apache.hadoop.hive.ql.parse.HiveParser.expression(HiveParser.java:45188)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_SelectClauseParser.selectItem(HiveParser_SelectClauseParser.java:1720)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_SelectClauseParser.selectList(HiveParser_SelectClauseParser.java:1234)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_SelectClauseParser.selectClause(HiveParser_SelectClauseParser.java:1004)
-	at org.apache.hadoop.hive.ql.parse.HiveParser.selectClause(HiveParser.java:45252)
-	at org.apache.hadoop.hive.ql.parse.HiveParser.atomSelectStatement(HiveParser.java:39777)
-	at org.apache.hadoop.hive.ql.parse.HiveParser.selectStatement(HiveParser.java:40044)
-	at org.apache.hadoop.hive.ql.parse.HiveParser.regularBody(HiveParser.java:39690)
-	at org.apache.hadoop.hive.ql.parse.HiveParser.queryStatementExpressionBody(HiveParser.java:38900)
-	at org.apache.hadoop.hive.ql.parse.HiveParser.queryStatementExpression(HiveParser.java:38788)
-	at org.apache.hadoop.hive.ql.parse.HiveParser.execStatement(HiveParser.java:2396)
-	at org.apache.hadoop.hive.ql.parse.HiveParser.statement(HiveParser.java:1420)
-	at org.apache.hadoop.hive.ql.parse.ParseDriver.parse(ParseDriver.java:220)
-	at org.apache.hadoop.hive.ql.parse.ParseUtils.parse(ParseUtils.java:74)
-	at org.apache.hadoop.hive.ql.parse.ParseUtils.parse(ParseUtils.java:67)
-	at org.apache.hadoop.hive.ql.Driver.compile(Driver.java:616)
-	at org.apache.hadoop.hive.ql.Driver.compileInternal(Driver.java:1826)
-	at org.apache.hadoop.hive.ql.Driver.compileAndRespond(Driver.java:1773)
-	at org.apache.hadoop.hive.ql.Driver.compileAndRespond(Driver.java:1768)
-	at org.apache.hadoop.hive.ql.reexec.ReExecDriver.compileAndRespond(ReExecDriver.java:126)
-	at org.apache.hadoop.hive.ql.reexec.ReExecDriver.run(ReExecDriver.java:214)
-	at org.apache.hadoop.hive.cli.CliDriver.processLocalCmd(CliDriver.java:239)
-	at org.apache.hadoop.hive.cli.CliDriver.processCmd(CliDriver.java:188)
-	at org.apache.hadoop.hive.cli.CliDriver.processLine(CliDriver.java:402)
-	at org.apache.hadoop.hive.cli.CliDriver.processLine(CliDriver.java:335)
-	at org.apache.hadoop.hive.cli.CliDriver.processReader(CliDriver.java:471)
-	at org.apache.hadoop.hive.cli.CliDriver.processFile(CliDriver.java:487)
-	at org.apache.hadoop.hive.cli.CliDriver.executeDriver(CliDriver.java:793)
-	at org.apache.hadoop.hive.cli.CliDriver.run(CliDriver.java:759)
-	at org.apache.hadoop.hive.cli.CliDriver.main(CliDriver.java:683)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.apache.hadoop.util.RunJar.run(RunJar.java:328)
-	at org.apache.hadoop.util.RunJar.main(RunJar.java:241)
-FAILED: ParseException line 5:19 cannot recognize input near 'date' ')' ',' in expression specification
+Time taken: 2.103 seconds, Fetched: 1 row(s)
+Query ID = kiper_20250825002639_c42d5399-78ab-4d4c-8f35-2c10f5e95bc8
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2025-08-25 00:26:43,791 Stage-1 map = 0%,  reduce = 0%
+2025-08-25 00:26:44,813 Stage-1 map = 100%,  reduce = 0%
+2025-08-25 00:26:45,821 Stage-1 map = 100%,  reduce = 100%
+Ended Job = job_local53326358_0001
+MapReduce Jobs Launched: 
+Stage-Stage-1:  HDFS Read: 227825030 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 0 msec
+OK
+Período de Análisis	1990-03-11 a 1990-03-11
+Time taken: 5.989 seconds, Fetched: 1 row(s)
+Query ID = kiper_20250825002645_92014942-8cfe-4c1b-8960-29c6aa02a162
+Total jobs = 6
+Launching Job 1 out of 6
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2025-08-25 00:26:48,379 Stage-1 map = 100%,  reduce = 100%
+Ended Job = job_local1010369804_0002
+Launching Job 2 out of 6
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2025-08-25 00:26:49,846 Stage-3 map = 100%,  reduce = 100%
+Ended Job = job_local1990830495_0003
+Launching Job 3 out of 6
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2025-08-25 00:26:51,304 Stage-4 map = 100%,  reduce = 100%
+Ended Job = job_local290161784_0004
+Launching Job 4 out of 6
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2025-08-25 00:26:52,673 Stage-5 map = 100%,  reduce = 100%
+Ended Job = job_local1264250921_0005
+Launching Job 5 out of 6
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2025-08-25 00:26:54,089 Stage-6 map = 0%,  reduce = 0%
+2025-08-25 00:26:55,094 Stage-6 map = 100%,  reduce = 100%
+Ended Job = job_local1825271331_0006
+Launching Job 6 out of 6
+Number of reduce tasks is set to 0 since there's no reduce operator
+Job running in-process (local Hadoop)
+2025-08-25 00:26:56,388 Stage-2 map = 100%,  reduce = 0%
+Ended Job = job_local674261040_0007
+MapReduce Jobs Launched: 
+Stage-Stage-1:  HDFS Read: 455650060 HDFS Write: 0 SUCCESS
+Stage-Stage-3:  HDFS Read: 683475090 HDFS Write: 0 SUCCESS
+Stage-Stage-4:  HDFS Read: 911300120 HDFS Write: 0 SUCCESS
+Stage-Stage-5:  HDFS Read: 1139125150 HDFS Write: 0 SUCCESS
+Stage-Stage-6:  HDFS Read: 1366950180 HDFS Write: 0 SUCCESS
+Stage-Stage-2:  HDFS Read: 3417375450 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 0 msec
+OK
+Total de Requests	350683
+Tasa de Error Global (%)	0.22
+IPs Únicas	4297
+Usuarios Únicos	1
+Datos Transferidos (GB)	3.99
+Time taken: 10.476 seconds, Fetched: 5 row(s)
+OK
+=== TOP 5 PAÍSES ===
+Time taken: 0.088 seconds, Fetched: 1 row(s)
+Query ID = kiper_20250825002656_1fc1e6ee-4a83-406d-8171-c2413978854f
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2025-08-25 00:26:58,520 Stage-1 map = 100%,  reduce = 100%
+Ended Job = job_local15914181_0008
+MapReduce Jobs Launched: 
+Stage-Stage-1:  HDFS Read: 1366954722 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 0 msec
+OK
+Poland	314549	3611	0.16%
+United States	18442	332	0.89%
+Netherlands	6321	41	0.17%
+Germany	5163	65	0.21%
+Canada	1117	5	0%
+Time taken: 2.026 seconds, Fetched: 5 row(s)
+OK
+=== HORAS PICO ===
+Time taken: 0.099 seconds, Fetched: 1 row(s)
+Query ID = kiper_20250825002658_0d43f5c7-57a7-4d51-9f1c-a345d5298595
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2025-08-25 00:27:00,185 Stage-1 map = 100%,  reduce = 100%
+Ended Job = job_local891747595_0009
+MapReduce Jobs Launched: 
+Stage-Stage-1:  HDFS Read: 1366954858 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 0 msec
+OK
+0	350683	4297	0.22%
+Time taken: 1.547 seconds, Fetched: 1 row(s)
+OK
+=== ERRORES MÁS COMUNES ===
+Time taken: 0.066 seconds, Fetched: 1 row(s)
+Query ID = kiper_20250825002700_8a62560b-4bb1-47d1-bd0c-fa677b6f87b0
+Total jobs = 2
+Launching Job 1 out of 2
+Number of reduce tasks not specified. Estimated from input data size: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2025-08-25 00:27:07,689 Stage-1 map = 100%,  reduce = 100%
+Ended Job = job_local318856742_0010
+Launching Job 2 out of 2
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2025-08-25 00:27:08,973 Stage-2 map = 100%,  reduce = 100%
+Ended Job = job_local1995852903_0011
+MapReduce Jobs Launched: 
+Stage-Stage-1:  HDFS Read: 1367025426 HDFS Write: 0 SUCCESS
+Stage-Stage-2:  HDFS Read: 1367025426 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 0 msec
+OK
+499	Client_Error	388	201
+404	Client_Error	307	30
+403	Client_Error	72	72
+400	Client_Error	11	4
+408	Client_Error	7	7
+Time taken: 8.714 seconds, Fetched: 5 row(s)
+OK
+=== DISTRIBUCIÓN HORARIA ===
+Time taken: 0.084 seconds, Fetched: 1 row(s)
+Query ID = kiper_20250825002709_abdb3a7e-6c06-42c7-b738-72543509090d
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2025-08-25 00:27:10,617 Stage-1 map = 100%,  reduce = 100%
+Ended Job = job_local426222119_0012
+MapReduce Jobs Launched: 
+Stage-Stage-1:  HDFS Read: 1367025562 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 0 msec
+OK
+0	350683	0.2	Madrugada
+Time taken: 1.55 seconds, Fetched: 1 row(s)
+OK
+=== TIPOS DE RECURSOS ===
+Time taken: 0.068 seconds, Fetched: 1 row(s)
+Warning: Map Join MAPJOIN[33][bigTable=?] in task 'Stage-5:MAPRED' is a cross product
+Warning: Shuffle Join JOIN[14][tables = [$hdt$_0, $hdt$_1]] in Stage 'Stage-2:MAPRED' is a cross product
+Query ID = kiper_20250825002710_fee2c72b-6496-4c5a-95af-b63254833ecf
+Total jobs = 5
+Launching Job 1 out of 5
+Number of reduce tasks not specified. Estimated from input data size: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2025-08-25 00:27:12,272 Stage-1 map = 100%,  reduce = 100%
+Ended Job = job_local1990427014_0013
+Launching Job 2 out of 5
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2025-08-25 00:27:13,845 Stage-4 map = 100%,  reduce = 0%
+2025-08-25 00:27:14,846 Stage-4 map = 100%,  reduce = 100%
+Ended Job = job_local96828220_0014
+Stage-7 is selected by condition resolver.
+Stage-2 is filtered out by condition resolver.
+SLF4J: Found binding in [jar:file:/opt/hive/lib/log4j-slf4j-impl-2.17.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+2025-08-25 00:27:22	Starting to launch local task to process map join;	maximum memory = 2390753282025-08-25 00:27:22	Uploaded 1 File to: file:/tmp/kiper/f5d71ace-c7f6-451d-907a-c8e2ecb1d7f9/hive_2025-08-25_00-27-10_717_4997801475456764812-1/-local-10007/HashTable-Stage-5/MapJoin-mapfile01--.hashtable (281 bytes)
+Execution completed successfully
+MapredLocal task succeeded
+Launching Job 4 out of 5
+Number of reduce tasks is set to 0 since there's no reduce operator
+Job running in-process (local Hadoop)
+2025-08-25 00:27:25,685 Stage-5 map = 100%,  reduce = 0%
+Ended Job = job_local732101195_0015
+Launching Job 5 out of 5
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2025-08-25 00:27:26,855 Stage-3 map = 100%,  reduce = 100%
+Ended Job = job_local696149901_0016
+MapReduce Jobs Launched: 
+Stage-Stage-1:  HDFS Read: 1594850592 HDFS Write: 0 SUCCESS
+Stage-Stage-4:  HDFS Read: 1822675622 HDFS Write: 0 SUCCESS
+Stage-Stage-5:  HDFS Read: 911337811 HDFS Write: 0 SUCCESS
+Stage-Stage-3:  HDFS Read: 1822675622 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 0 msec
+OK
+Image	230200	65.6	13411.0
+Other	98646	28.1	7398.0
+HTML	18810	5.4	14540.0
+JavaScript	2181	0.6	81957.0
+CSS	816	0.2	3668.0
+Data	30	0	229794.0
+Time taken: 16.158 seconds, Fetched: 6 row(s)
+OK
+=== TOP IPs ACTIVAS ===
+Time taken: 0.099 seconds, Fetched: 1 row(s)
+Query ID = kiper_20250825002726_e7f24ee5-07d0-4daa-af13-ba9ec9dd2a0f
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2025-08-25 00:27:29,233 Stage-1 map = 0%,  reduce = 0%
+2025-08-25 00:27:30,236 Stage-1 map = 100%,  reduce = 100%
+Ended Job = job_local1482372053_0017
+MapReduce Jobs Launched: 
+Stage-Stage-1:  HDFS Read: 1823558220 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 0 msec
+OK
+950PL	Unknown	6613	Active_User	71
+599PL	Unknown	6147	Active_User	56
+3560PL	Unknown	4870	Active_User	3
+564PL	Unknown	3601	Active_User	0
+2306PL	Unknown	3480	Active_User	1
+4015PL	Unknown	3292	Active_User	0
+1280PL	Unknown	2667	Active_User	0
+12US	Unknown	2446	Bot	22
+268PL	Unknown	2371	Active_User	1
+1287PL	Unknown	2327	Active_User	3
+Time taken: 3.265 seconds, Fetched: 10 row(s)
+OK
+=== RESUMEN FINAL ===
+Time taken: 0.391 seconds, Fetched: 1 row(s)
+Query ID = kiper_20250825002730_69afb07c-27f2-4e28-a02b-69a1c4578e17
+Total jobs = 6
+Launching Job 1 out of 6
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2025-08-25 00:27:32,313 Stage-1 map = 100%,  reduce = 100%
+Ended Job = job_local1903161307_0018
+Launching Job 2 out of 6
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2025-08-25 00:27:33,714 Stage-3 map = 0%,  reduce = 0%
+2025-08-25 00:27:34,813 Stage-3 map = 100%,  reduce = 100%
+Ended Job = job_local729040216_0019
+Launching Job 3 out of 6
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2025-08-25 00:27:36,220 Stage-4 map = 0%,  reduce = 0%
+2025-08-25 00:27:37,222 Stage-4 map = 100%,  reduce = 100%
+Ended Job = job_local1705102819_0020
+Launching Job 4 out of 6
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2025-08-25 00:27:42,194 Stage-5 map = 100%,  reduce = 100%
+Ended Job = job_local2003758111_0021
+Launching Job 5 out of 6
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2025-08-25 00:27:43,477 Stage-6 map = 0%,  reduce = 0%
+2025-08-25 00:27:44,481 Stage-6 map = 100%,  reduce = 100%
+Ended Job = job_local1982172830_0022
+Launching Job 6 out of 6
+Number of reduce tasks is set to 0 since there's no reduce operator
+Job running in-process (local Hadoop)
+2025-08-25 00:27:45,768 Stage-2 map = 100%,  reduce = 0%
+Ended Job = job_local1319296233_0023
+MapReduce Jobs Launched: 
+Stage-Stage-1:  HDFS Read: 2051383250 HDFS Write: 0 SUCCESS
+Stage-Stage-3:  HDFS Read: 2279208280 HDFS Write: 0 SUCCESS
+Stage-Stage-4:  HDFS Read: 2507033310 HDFS Write: 0 SUCCESS
+Stage-Stage-5:  HDFS Read: 2734858340 HDFS Write: 0 SUCCESS
+Stage-Stage-6:  HDFS Read: 2962683370 HDFS Write: 0 SUCCESS
+Stage-Stage-2:  HDFS Read: 7406708425 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 0 msec
+OK
+Período de análisis (días)	1
+Registros procesados exitosamente	350683
+Países únicos detectados	1
+Códigos de estado únicos	10
+Promedio requests por día	350683.0
+Time taken: 15.134 seconds, Fetched: 5 row(s)

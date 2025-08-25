@@ -23,11 +23,11 @@ SELECT
     SUM(CASE WHEN resource_type = 'CSS' THEN 1 ELSE 0 END) as css_requests,
     SUM(CASE WHEN resource_type = 'JavaScript' THEN 1 ELSE 0 END) as js_requests
 FROM eclog_processed
-GROUP BY hour
-ORDER BY hour;
+GROUP BY hour;
 
 -- Ver patrones de tráfico por hora
-SELECT * FROM hourly_stats;
+SELECT * FROM hourly_stats
+ORDER BY hour;
 
 -- Análisis temporal más detallado
 SELECT 

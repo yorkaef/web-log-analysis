@@ -10,26 +10,22 @@ SELECT
     COUNT(*) as error_count,
     COUNT(DISTINCT ip_id) as unique_ips_affected,
     COUNT(DISTINCT user_id) as unique_users_affected,
-    MIN(timestamp) as first_occurrence,
-    MAX(timestamp) as last_occurrence,
-    -- Distribución temporal de errores
+    MIN(request_timestamp) as first_occurrence,    -- Cambiado de 'timestamp' a 'request_timestamp'
+    MAX(request_timestamp) as last_occurrence,     -- Cambiado de 'timestamp' a 'request_timestamp'
     COUNT(DISTINCT hour) as hours_with_errors,
-    -- Métodos HTTP que generan este error
     COUNT(DISTINCT http_method) as different_methods,
-    -- Referrers comunes para este error
     COUNT(DISTINCT referrer) as different_referrers
 FROM eclog_processed
 WHERE response_code >= 400
-GROUP BY response_code, status_category, uri
-ORDER BY error_count DESC;
+GROUP BY response_code, status_category, uri;
 
 -- Resumen de errores por código
 SELECT 
     response_code,
     status_category,
-    COUNT(*) as total_errors,
+    SUM(error_count) as total_errors,
     COUNT(DISTINCT uri) as unique_uris_affected,
-    COUNT(DISTINCT ip_id) as unique_ips_affected,
+    SUM(unique_ips_affected) as total_unique_ips_affected,  -- Cambiado para evitar doble COUNT DISTINCT
     ROUND(AVG(error_count), 2) as avg_errors_per_uri
 FROM error_analysis
 GROUP BY response_code, status_category
@@ -40,7 +36,8 @@ SELECT
     uri,
     SUM(error_count) as total_errors,
     COUNT(DISTINCT response_code) as different_error_codes,
-    STRING_AGG(CAST(response_code AS STRING), ', ') as error_codes
+    -- Usar COLLECT_SET en lugar de COLLECT_LIST si está disponible
+    CONCAT_WS(', ', COLLECT_SET(CAST(response_code AS STRING))) as error_codes
 FROM error_analysis
 GROUP BY uri
 ORDER BY total_errors DESC

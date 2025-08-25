@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Mapper para analizar errores HTTP
+Mapper simple para analizar errores HTTP
 Input: TSV EClog
 Output: error_code \t uri (solo para códigos 4xx y 5xx)
 """
@@ -21,9 +21,9 @@ for line in sys.stdin:
     
     try:
         fields = line.split('\t')
-        if len(fields) >= 10:
-            response_code = fields[6]  # ResponseCode
-            uri = fields[4]  # Uri
+        if len(fields) >= 18:
+            response_code = fields[6].strip()  # ResponseCode es columna 6 (índice 6)
+            uri = fields[4].strip()  # Uri es columna 4 (índice 4)
             
             try:
                 code = int(response_code)

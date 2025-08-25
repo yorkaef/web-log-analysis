@@ -11,5 +11,6 @@
         "*.hql": "sql",
         "*.tsv": "csv"
     },
-    "terminal.integrated.defaultProfile.linux": "bash"
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "remote.autoForwardPortsFallback": 0
 }

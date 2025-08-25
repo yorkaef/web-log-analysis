@@ -3,110 +3,150 @@ SLF4J: Found binding in [jar:file:/opt/hive/lib/log4j-slf4j-impl-2.17.1.jar!/org
 SLF4J: Found binding in [jar:file:/home/kiper/hadoop/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
 SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
-Hive Session ID = 504b6ca1-560c-4884-84da-24c632972527
+Hive Session ID = 013085db-caf4-4a8a-90cb-033dc3080c05
 
 Logging initialized using configuration in jar:file:/opt/hive/lib/hive-common-3.1.3.jar!/hive-log4j2.properties Async: true
-Hive Session ID = e0084804-c9b3-4ac9-b8f6-e40018dbaaf2
+Hive Session ID = 69580d11-ffcb-4ca7-8bff-6562e39c1b8d
 OK
-Time taken: 0.682 seconds
+Time taken: 0.584 seconds
 OK
-Time taken: 0.084 seconds
-NoViableAltException(374@[423:1: atomExpression : ( constant | ( intervalExpression )=> intervalExpression | castExpression | extractExpression | floorExpression | caseExpression | whenExpression | ( subQueryExpression )=> ( subQueryExpression ) -> ^( TOK_SUBQUERY_EXPR TOK_SUBQUERY_OP subQueryExpression ) | ( functionName LPAREN )=> function | tableOrColumn | expressionsInParenthesis[true, false] );])
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser$DFA36.specialStateTransition(HiveParser_IdentifiersParser.java:34559)
-	at org.antlr.runtime.DFA.predict(DFA.java:80)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.atomExpression(HiveParser_IdentifiersParser.java:6930)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceFieldExpression(HiveParser_IdentifiersParser.java:7172)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceUnaryPrefixExpression(HiveParser_IdentifiersParser.java:7671)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceUnarySuffixExpression(HiveParser_IdentifiersParser.java:7727)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceBitwiseXorExpression(HiveParser_IdentifiersParser.java:7889)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceStarExpression(HiveParser_IdentifiersParser.java:8032)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedencePlusExpression(HiveParser_IdentifiersParser.java:8175)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceConcatenateExpression(HiveParser_IdentifiersParser.java:8314)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceAmpersandExpression(HiveParser_IdentifiersParser.java:8524)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceBitwiseOrExpression(HiveParser_IdentifiersParser.java:8661)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceSimilarExpressionMain(HiveParser_IdentifiersParser.java:9144)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceSimilarExpression(HiveParser_IdentifiersParser.java:9040)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceEqualExpression(HiveParser_IdentifiersParser.java:10254)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceNotExpression(HiveParser_IdentifiersParser.java:10541)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceAndExpression(HiveParser_IdentifiersParser.java:10650)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceOrExpression(HiveParser_IdentifiersParser.java:10791)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.expression(HiveParser_IdentifiersParser.java:6870)
-	at org.apache.hadoop.hive.ql.parse.HiveParser.expression(HiveParser.java:45188)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_SelectClauseParser.selectExpression(HiveParser_SelectClauseParser.java:2296)
-	at org.apache.hadoop.hive.ql.parse.HiveParser.selectExpression(HiveParser.java:45128)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.function(HiveParser_IdentifiersParser.java:3581)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.atomExpression(HiveParser_IdentifiersParser.java:7081)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceFieldExpression(HiveParser_IdentifiersParser.java:7172)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceUnaryPrefixExpression(HiveParser_IdentifiersParser.java:7671)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceUnarySuffixExpression(HiveParser_IdentifiersParser.java:7727)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceBitwiseXorExpression(HiveParser_IdentifiersParser.java:7889)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceStarExpression(HiveParser_IdentifiersParser.java:8032)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedencePlusExpression(HiveParser_IdentifiersParser.java:8175)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceConcatenateExpression(HiveParser_IdentifiersParser.java:8314)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceAmpersandExpression(HiveParser_IdentifiersParser.java:8524)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceBitwiseOrExpression(HiveParser_IdentifiersParser.java:8661)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceSimilarExpressionMain(HiveParser_IdentifiersParser.java:9144)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceSimilarExpression(HiveParser_IdentifiersParser.java:9040)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceEqualExpression(HiveParser_IdentifiersParser.java:10254)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceNotExpression(HiveParser_IdentifiersParser.java:10541)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceAndExpression(HiveParser_IdentifiersParser.java:10650)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceOrExpression(HiveParser_IdentifiersParser.java:10791)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.expression(HiveParser_IdentifiersParser.java:6870)
-	at org.apache.hadoop.hive.ql.parse.HiveParser.expression(HiveParser.java:45188)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_SelectClauseParser.selectExpression(HiveParser_SelectClauseParser.java:2296)
-	at org.apache.hadoop.hive.ql.parse.HiveParser.selectExpression(HiveParser.java:45128)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.function(HiveParser_IdentifiersParser.java:3581)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.atomExpression(HiveParser_IdentifiersParser.java:7081)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceFieldExpression(HiveParser_IdentifiersParser.java:7172)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceUnaryPrefixExpression(HiveParser_IdentifiersParser.java:7671)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceUnarySuffixExpression(HiveParser_IdentifiersParser.java:7727)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceBitwiseXorExpression(HiveParser_IdentifiersParser.java:7889)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceStarExpression(HiveParser_IdentifiersParser.java:8032)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedencePlusExpression(HiveParser_IdentifiersParser.java:8175)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceConcatenateExpression(HiveParser_IdentifiersParser.java:8314)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceAmpersandExpression(HiveParser_IdentifiersParser.java:8524)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceBitwiseOrExpression(HiveParser_IdentifiersParser.java:8661)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceSimilarExpressionMain(HiveParser_IdentifiersParser.java:9144)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceSimilarExpression(HiveParser_IdentifiersParser.java:9040)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceEqualExpression(HiveParser_IdentifiersParser.java:10254)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceNotExpression(HiveParser_IdentifiersParser.java:10541)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceAndExpression(HiveParser_IdentifiersParser.java:10650)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.precedenceOrExpression(HiveParser_IdentifiersParser.java:10791)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_IdentifiersParser.expression(HiveParser_IdentifiersParser.java:6870)
-	at org.apache.hadoop.hive.ql.parse.HiveParser.expression(HiveParser.java:45188)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_SelectClauseParser.selectItem(HiveParser_SelectClauseParser.java:1720)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_SelectClauseParser.selectList(HiveParser_SelectClauseParser.java:1234)
-	at org.apache.hadoop.hive.ql.parse.HiveParser_SelectClauseParser.selectClause(HiveParser_SelectClauseParser.java:1004)
-	at org.apache.hadoop.hive.ql.parse.HiveParser.selectClause(HiveParser.java:45252)
-	at org.apache.hadoop.hive.ql.parse.HiveParser.atomSelectStatement(HiveParser.java:39777)
-	at org.apache.hadoop.hive.ql.parse.HiveParser.selectStatement(HiveParser.java:40044)
-	at org.apache.hadoop.hive.ql.parse.HiveParser.selectStatementWithCTE(HiveParser.java:40732)
-	at org.apache.hadoop.hive.ql.parse.HiveParser.createTableStatement(HiveParser.java:6848)
-	at org.apache.hadoop.hive.ql.parse.HiveParser.ddlStatement(HiveParser.java:4295)
-	at org.apache.hadoop.hive.ql.parse.HiveParser.execStatement(HiveParser.java:2494)
-	at org.apache.hadoop.hive.ql.parse.HiveParser.statement(HiveParser.java:1420)
-	at org.apache.hadoop.hive.ql.parse.ParseDriver.parse(ParseDriver.java:220)
-	at org.apache.hadoop.hive.ql.parse.ParseUtils.parse(ParseUtils.java:74)
-	at org.apache.hadoop.hive.ql.parse.ParseUtils.parse(ParseUtils.java:67)
-	at org.apache.hadoop.hive.ql.Driver.compile(Driver.java:616)
-	at org.apache.hadoop.hive.ql.Driver.compileInternal(Driver.java:1826)
-	at org.apache.hadoop.hive.ql.Driver.compileAndRespond(Driver.java:1773)
-	at org.apache.hadoop.hive.ql.Driver.compileAndRespond(Driver.java:1768)
-	at org.apache.hadoop.hive.ql.reexec.ReExecDriver.compileAndRespond(ReExecDriver.java:126)
-	at org.apache.hadoop.hive.ql.reexec.ReExecDriver.run(ReExecDriver.java:214)
-	at org.apache.hadoop.hive.cli.CliDriver.processLocalCmd(CliDriver.java:239)
-	at org.apache.hadoop.hive.cli.CliDriver.processCmd(CliDriver.java:188)
-	at org.apache.hadoop.hive.cli.CliDriver.processLine(CliDriver.java:402)
-	at org.apache.hadoop.hive.cli.CliDriver.processLine(CliDriver.java:335)
-	at org.apache.hadoop.hive.cli.CliDriver.processReader(CliDriver.java:471)
-	at org.apache.hadoop.hive.cli.CliDriver.processFile(CliDriver.java:487)
-	at org.apache.hadoop.hive.cli.CliDriver.executeDriver(CliDriver.java:793)
-	at org.apache.hadoop.hive.cli.CliDriver.run(CliDriver.java:759)
-	at org.apache.hadoop.hive.cli.CliDriver.main(CliDriver.java:683)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.apache.hadoop.util.RunJar.run(RunJar.java:328)
-	at org.apache.hadoop.util.RunJar.main(RunJar.java:241)
-FAILED: ParseException line 7:33 cannot recognize input near 'timestamp' ')' ')' in expression specification
+Time taken: 0.166 seconds
+Query ID = kiper_20250825002423_68df7768-b5c3-4773-8aff-766bbb8fd67e
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks not specified. Estimated from input data size: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2025-08-25 00:24:28,973 Stage-1 map = 0%,  reduce = 0%
+2025-08-25 00:24:38,761 Stage-1 map = 100%,  reduce = 0%
+2025-08-25 00:24:47,364 Stage-1 map = 100%,  reduce = 100%
+Ended Job = job_local1689514341_0001
+Moving data to directory hdfs://localhost:9001/user/hive/warehouse/eclog_analysis.db/top_ips
+MapReduce Jobs Launched: 
+Stage-Stage-1:  HDFS Read: 227825030 HDFS Write: 441383 SUCCESS
+Total MapReduce CPU Time Spent: 0 msec
+OK
+Time taken: 24.381 seconds
+Query ID = kiper_20250825002448_89ca16a7-64e0-4eec-b24e-8ba87192effe
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2025-08-25 00:24:49,815 Stage-1 map = 100%,  reduce = 100%
+Ended Job = job_local1135718143_0002
+MapReduce Jobs Launched: 
+Stage-Stage-1:  HDFS Read: 228707796 HDFS Write: 882766 SUCCESS
+Total MapReduce CPU Time Spent: 0 msec
+OK
+12US	2446	1835	Bot	22	Unknown
+299US	1791	1670	Bot	30	Unknown
+24PL	1401	1	Suspicious_Bot	0	Unknown
+31PL	1307	1	Suspicious_Bot	0	Unknown
+528US	1251	1100	Bot	4	Unknown
+262PL	1219	1	Suspicious_Bot	0	Unknown
+7PL	1081	1	Suspicious_Bot	0	Unknown
+237US	1046	909	Bot	3	Unknown
+30PL	1028	1	Suspicious_Bot	0	Unknown
+38US	980	832	Bot	8	Unknown
+962US	763	697	Bot	1	Unknown
+34US	686	626	Bot	1	Unknown
+148CA	601	297	Bot	0	Unknown
+1271US	497	469	Bot	1	Unknown
+560UA	494	274	Bot	1	Unknown
+51US	435	395	Bot	3	Unknown
+176US	358	333	Bot	0	Unknown
+227US	341	328	Bot	2	Unknown
+1604US	329	309	Bot	0	Unknown
+481US	298	278	Bot	0	Unknown
+561DE	288	152	Bot	0	Unknown
+3402US	275	271	Bot	1	Unknown
+52NL	265	259	Bot	0	Unknown
+151DE	252	135	Bot	0	Unknown
+26NL	250	246	Bot	0	Unknown
+2420US	249	235	Bot	3	Unknown
+44NL	245	237	Bot	0	Unknown
+2340US	244	228	Bot	2	Unknown
+43NL	242	230	Bot	1	Unknown
+76US	237	152	Bot	0	Unknown
+451US	228	217	Bot	0	Unknown
+122NL	223	219	Bot	0	Unknown
+98NL	223	216	Bot	0	Unknown
+70NL	222	218	Bot	0	Unknown
+23NL	220	212	Bot	1	Unknown
+116NL	220	213	Bot	0	Unknown
+68NL	219	214	Bot	0	Unknown
+46NL	218	211	Bot	1	Unknown
+55NL	217	212	Bot	0	Unknown
+39NL	217	211	Bot	2	Unknown
+2973US	216	205	Bot	1	Unknown
+49NL	215	209	Bot	2	Unknown
+2NL	215	210	Bot	0	Unknown
+61NL	212	204	Bot	0	Unknown
+8NL	209	200	Bot	0	Unknown
+95NL	208	200	Bot	1	Unknown
+42NL	207	202	Bot	0	Unknown
+19NL	207	205	Bot	0	Unknown
+79NL	207	202	Bot	1	Unknown
+301US	200	187	Bot	0	Unknown
+36US	197	192	Bot	1	Unknown
+59NL	194	188	Bot	0	Unknown
+105NL	193	187	Bot	0	Unknown
+60NL	191	191	Bot	1	Unknown
+11NL	190	186	Bot	1	Unknown
+18NL	188	184	Bot	0	Unknown
+66NL	182	174	Bot	0	Unknown
+69NL	179	168	Bot	0	Unknown
+56NL	173	170	Bot	0	Unknown
+3908US	128	127	Bot	1	Unknown
+3577US	128	126	Bot	0	Unknown
+2121US	91	46	Bot	0	Unknown
+3025US	89	45	Bot	0	Unknown
+58US	70	70	Bot	0	Unknown
+255RU	60	54	Bot	35	Unknown
+559PL	59	55	Bot	0	Unknown
+13DE	58	31	Bot	0	Unknown
+3694US	58	58	Bot	0	Unknown
+48US	56	56	Bot	0	Unknown
+265US	56	19	Bot	18	Unknown
+418US	44	43	Bot	0	Unknown
+266US	44	18	Bot	12	Unknown
+219US	43	42	Bot	0	Unknown
+288DE	43	21	Bot	4	Unknown
+78US	41	35	Bot	0	Unknown
+264US	31	13	Bot	10	Unknown
+244US	29	29	Bot	0	Unknown
+50US	27	26	Bot	0	Unknown
+144US	25	23	Bot	1	Unknown
+167US	24	24	Bot	15	Unknown
+207US	20	20	Bot	0	Unknown
+77US	18	17	Bot	0	Unknown
+209US	17	17	Bot	0	Unknown
+211US	17	17	Bot	0	Unknown
+208US	14	14	Bot	0	Unknown
+1457DE	14	7	Bot	0	Unknown
+196US	12	12	Bot	0	Unknown
+969FR	10	8	Bot	0	Unknown
+284RU	9	9	Bot	9	Unknown
+298US	8	7	Bot	7	Unknown
+218US	8	6	Bot	1	Unknown
+62US	7	5	Bot	3	Unknown
+334US	7	5	Bot	6	Unknown
+183US	6	1	Bot	0	Unknown
+297US	5	5	Bot	2	Unknown
+234US	5	5	Bot	0	Unknown
+3329US	5	4	Bot	0	Unknown
+2075RU	5	5	Bot	4	Unknown
+1098PL	5	5	Bot	2	Unknown
+295US	4	4	Bot	0	Unknown
+Time taken: 1.614 seconds, Fetched: 100 row(s)

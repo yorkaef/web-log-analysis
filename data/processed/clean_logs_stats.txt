@@ -1,5 +1,5 @@
 Estadísticas del dataset EClog
-Generado: 2025-08-18 17:24:48.041906
+Generado: 2025-08-25 00:18:33.727626
 Registros totales: 350683
 IPs únicas: 4297
 Usuarios únicos: 1

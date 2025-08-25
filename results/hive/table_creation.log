@@ -3,47 +3,160 @@ SLF4J: Found binding in [jar:file:/opt/hive/lib/log4j-slf4j-impl-2.17.1.jar!/org
 SLF4J: Found binding in [jar:file:/home/kiper/hadoop/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
 SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
-Hive Session ID = 47a3792f-8f52-44d4-be62-2e2fa723e7d3
+Hive Session ID = 82fde9e2-bdb4-48eb-8a30-cea57f774b86
 
 Logging initialized using configuration in jar:file:/opt/hive/lib/hive-common-3.1.3.jar!/hive-log4j2.properties Async: true
-Hive Session ID = 7602487f-7de2-4389-ab70-4bf54ce0c8ed
+Hive Session ID = 684952b8-4721-4b89-834d-afb1f1d3e6b8
 OK
-Time taken: 1.332 seconds
+Time taken: 0.592 seconds
 OK
-Time taken: 0.022 seconds
+Time taken: 0.023 seconds
 OK
-Time taken: 0.081 seconds
-NoViableAltException(309@[2389:1: columnNameTypeOrConstraint : ( ( tableConstraint ) | ( columnNameTypeConstraint ) );])
-	at org.antlr.runtime.DFA.noViableAlt(DFA.java:158)
-	at org.antlr.runtime.DFA.predict(DFA.java:116)
-	at org.apache.hadoop.hive.ql.parse.HiveParser.columnNameTypeOrConstraint(HiveParser.java:34044)
-	at org.apache.hadoop.hive.ql.parse.HiveParser.columnNameTypeOrConstraintList(HiveParser.java:29840)
-	at org.apache.hadoop.hive.ql.parse.HiveParser.createTableStatement(HiveParser.java:6662)
-	at org.apache.hadoop.hive.ql.parse.HiveParser.ddlStatement(HiveParser.java:4295)
-	at org.apache.hadoop.hive.ql.parse.HiveParser.execStatement(HiveParser.java:2494)
-	at org.apache.hadoop.hive.ql.parse.HiveParser.statement(HiveParser.java:1420)
-	at org.apache.hadoop.hive.ql.parse.ParseDriver.parse(ParseDriver.java:220)
-	at org.apache.hadoop.hive.ql.parse.ParseUtils.parse(ParseUtils.java:74)
-	at org.apache.hadoop.hive.ql.parse.ParseUtils.parse(ParseUtils.java:67)
-	at org.apache.hadoop.hive.ql.Driver.compile(Driver.java:616)
-	at org.apache.hadoop.hive.ql.Driver.compileInternal(Driver.java:1826)
-	at org.apache.hadoop.hive.ql.Driver.compileAndRespond(Driver.java:1773)
-	at org.apache.hadoop.hive.ql.Driver.compileAndRespond(Driver.java:1768)
-	at org.apache.hadoop.hive.ql.reexec.ReExecDriver.compileAndRespond(ReExecDriver.java:126)
-	at org.apache.hadoop.hive.ql.reexec.ReExecDriver.run(ReExecDriver.java:214)
-	at org.apache.hadoop.hive.cli.CliDriver.processLocalCmd(CliDriver.java:239)
-	at org.apache.hadoop.hive.cli.CliDriver.processCmd(CliDriver.java:188)
-	at org.apache.hadoop.hive.cli.CliDriver.processLine(CliDriver.java:402)
-	at org.apache.hadoop.hive.cli.CliDriver.processLine(CliDriver.java:335)
-	at org.apache.hadoop.hive.cli.CliDriver.processReader(CliDriver.java:471)
-	at org.apache.hadoop.hive.cli.CliDriver.processFile(CliDriver.java:487)
-	at org.apache.hadoop.hive.cli.CliDriver.executeDriver(CliDriver.java:793)
-	at org.apache.hadoop.hive.cli.CliDriver.run(CliDriver.java:759)
-	at org.apache.hadoop.hive.cli.CliDriver.main(CliDriver.java:683)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.apache.hadoop.util.RunJar.run(RunJar.java:328)
-	at org.apache.hadoop.util.RunJar.main(RunJar.java:241)
-FAILED: ParseException line 5:4 cannot recognize input near 'timestamp' 'STRING' ',' in column name or constraint
+Time taken: 0.171 seconds
+OK
+Time taken: 0.107 seconds
+OK
+Time taken: 0.207 seconds
+OK
+Tabla RAW creada
+Time taken: 5.218 seconds, Fetched: 1 row(s)
+OK
+ip_id               	string              	                    
+user_id             	string              	                    
+request_timestamp   	string              	                    
+http_method         	string              	                    
+uri                 	string              	                    
+http_version        	string              	                    
+response_code       	int                 	                    
+bytes               	bigint              	                    
+referrer            	string              	                    
+user_agent          	string              	                    
+Time taken: 0.05 seconds, Fetched: 10 row(s)
+Query ID = kiper_20250825001956_2f834fc4-ab0e-4706-a07d-bedc3056f849
+Total jobs = 3
+Launching Job 1 out of 3
+Number of reduce tasks is set to 0 since there's no reduce operator
+Job running in-process (local Hadoop)
+2025-08-25 00:19:59,358 Stage-1 map = 0%,  reduce = 0%
+2025-08-25 00:21:00,049 Stage-1 map = 0%,  reduce = 0%
+2025-08-25 00:22:00,270 Stage-1 map = 0%,  reduce = 0%
+2025-08-25 00:23:00,485 Stage-1 map = 0%,  reduce = 0%
+2025-08-25 00:23:11,497 Stage-1 map = 100%,  reduce = 0%
+Ended Job = job_local343785374_0001
+Stage-4 is selected by condition resolver.
+Stage-3 is filtered out by condition resolver.
+Stage-5 is filtered out by condition resolver.
+Moving data to directory hdfs://localhost:9001/user/hive/warehouse/eclog_analysis.db/.hive-staging_hive_2025-08-25_00-19-56_402_8060948048510633530-1/-ext-10002
+Moving data to directory hdfs://localhost:9001/user/hive/warehouse/eclog_analysis.db/eclog_processed
+MapReduce Jobs Launched: 
+Stage-Stage-1:  HDFS Read: 113746486 HDFS Write: 113912612 SUCCESS
+Total MapReduce CPU Time Spent: 0 msec
+OK
+Time taken: 195.784 seconds
+OK
+Tabla PROCESADA creada exitosamente
+Time taken: 0.1 seconds, Fetched: 1 row(s)
+OK
+ip_id               	string              	                    
+user_id             	string              	                    
+request_timestamp   	timestamp           	                    
+http_method         	string              	                    
+uri                 	string              	                    
+http_version        	string              	                    
+response_code       	int                 	                    
+bytes               	bigint              	                    
+referrer            	string              	                    
+user_agent          	string              	                    
+hour                	int                 	                    
+day_of_week         	int                 	                    
+log_date            	date                	                    
+status_category     	string              	                    
+is_bot              	boolean             	                    
+country             	string              	                    
+resource_type       	string              	                    
+has_referrer        	boolean             	                    
+Time taken: 0.052 seconds, Fetched: 18 row(s)
+OK
+ESTADÍSTICAS BÁSICAS
+Time taken: 0.112 seconds, Fetched: 1 row(s)
+Query ID = kiper_20250825002312_a04b6258-96af-477a-977e-ce766b82a18c
+Total jobs = 8
+Launching Job 1 out of 8
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2025-08-25 00:23:14,338 Stage-1 map = 100%,  reduce = 100%
+Ended Job = job_local655994897_0002
+Launching Job 2 out of 8
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2025-08-25 00:23:15,703 Stage-3 map = 100%,  reduce = 0%
+2025-08-25 00:23:16,705 Stage-3 map = 100%,  reduce = 100%
+Ended Job = job_local1303780535_0003
+Launching Job 3 out of 8
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2025-08-25 00:23:18,100 Stage-4 map = 100%,  reduce = 100%
+Ended Job = job_local1918651571_0004
+Launching Job 4 out of 8
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2025-08-25 00:23:19,708 Stage-5 map = 0%,  reduce = 0%
+2025-08-25 00:23:20,710 Stage-5 map = 100%,  reduce = 100%
+Ended Job = job_local738730600_0005
+Launching Job 5 out of 8
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2025-08-25 00:23:22,291 Stage-6 map = 0%,  reduce = 0%
+2025-08-25 00:23:23,295 Stage-6 map = 100%,  reduce = 100%
+Ended Job = job_local386118852_0006
+Launching Job 6 out of 8
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2025-08-25 00:23:24,652 Stage-7 map = 0%,  reduce = 0%
+Ended Job = job_local639613189_0007 with errors
+Error during job, obtaining debugging information...
+FAILED: Execution Error, return code 2 from org.apache.hadoop.hive.ql.exec.mr.MapRedTask
+MapReduce Jobs Launched: 
+Stage-Stage-1:  HDFS Read: 455318196 HDFS Write: 227825224 SUCCESS
+Stage-Stage-3:  HDFS Read: 683143226 HDFS Write: 227825224 SUCCESS
+Stage-Stage-4:  HDFS Read: 910968256 HDFS Write: 227825224 SUCCESS
+Stage-Stage-5:  HDFS Read: 1138793286 HDFS Write: 227825224 SUCCESS
+Stage-Stage-6:  HDFS Read: 1366618316 HDFS Write: 227825224 SUCCESS
+Stage-Stage-7:  HDFS Read: 0 HDFS Write: 0 FAIL
+Total MapReduce CPU Time Spent: 0 msec

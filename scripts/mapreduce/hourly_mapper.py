@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
 """
-Mapper para analizar tráfico por hora
-Input: TSV con columnas EClog
+Mapper simple para analizar tráfico por hora
+Input: TSV EClog con columna Hour
 Output: hora \t 1
 """
 import sys
-from datetime import datetime
 
 first_line = True
 
@@ -22,21 +21,26 @@ for line in sys.stdin:
     
     try:
         fields = line.split('\t')
-        if len(fields) >= 10:
-            timestamp_str = fields[2]  # TimeStamp es la tercera columna
+        if len(fields) >= 18:  # Verificar que tenemos todas las columnas
+            hour = fields[10].strip()  # Hour es la columna 10 (índice 10)
             
-            # Parsear timestamp (formato puede variar)
+            # Validar que es un número válido
             try:
-                # Intentar varios formatos comunes
-                for fmt in ['%Y-%m-%d %H:%M:%S', '%m/%d/%Y %H:%M:%S', '%d/%m/%Y %H:%M:%S']:
-                    try:
-                        timestamp = datetime.strptime(timestamp_str, fmt)
-                        hour = timestamp.hour
-                        print(f"{hour}\t1")
-                        break
-                    except ValueError:
-                        continue
-            except:
-                continue
+                hour_int = int(hour)
+                if 0 <= hour_int <= 23:
+                    print(f"{hour_int}\t1")
+            except ValueError:
+                # Si no es un número válido, intentar extraer del timestamp
+                timestamp_str = fields[2].strip()  # TimeStamp
+                try:
+                    from datetime import datetime
+                    # El formato parece ser: 1990-03-11 00:42:36.000
+                    timestamp = datetime.strptime(timestamp_str.split('.')[0], '%Y-%m-%d %H:%M:%S')
+                    hour_from_timestamp = timestamp.hour
+                    print(f"{hour_from_timestamp}\t1")
+                except:
+                    continue
+                    
     except Exception:
+        # Ignorar líneas malformadas
         continue

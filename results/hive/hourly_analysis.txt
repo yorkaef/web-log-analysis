@@ -3,12 +3,82 @@ SLF4J: Found binding in [jar:file:/opt/hive/lib/log4j-slf4j-impl-2.17.1.jar!/org
 SLF4J: Found binding in [jar:file:/home/kiper/hadoop/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
 SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
-Hive Session ID = a7e78eea-c712-48be-ab1c-f68e9766af3e
+Hive Session ID = fd607a95-7662-4ff0-96f4-33343f6fd92b
 
 Logging initialized using configuration in jar:file:/opt/hive/lib/hive-common-3.1.3.jar!/hive-log4j2.properties Async: true
-Hive Session ID = 045427db-31be-4c70-90ba-bdbe1932973a
+Hive Session ID = 72f85207-afa7-4c4b-9e60-15f7f07fa0cd
 OK
-Time taken: 0.77 seconds
+Time taken: 0.742 seconds
 OK
-Time taken: 0.082 seconds
-FAILED: SemanticException [Error 10001]: Line 22:5 Table not found 'eclog_processed'
+Time taken: 0.177 seconds
+Query ID = kiper_20250825002359_237cdc8d-4d4a-4af7-92f7-7b67ad4ce697
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks not specified. Estimated from input data size: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2025-08-25 00:24:07,944 Stage-1 map = 0%,  reduce = 0%
+2025-08-25 00:24:10,015 Stage-1 map = 100%,  reduce = 0%
+2025-08-25 00:24:11,026 Stage-1 map = 100%,  reduce = 100%
+Ended Job = job_local266010098_0001
+Moving data to directory hdfs://localhost:9001/user/hive/warehouse/eclog_analysis.db/hourly_stats
+MapReduce Jobs Launched: 
+Stage-Stage-1:  HDFS Read: 227825030 HDFS Write: 151 SUCCESS
+Total MapReduce CPU Time Spent: 0 msec
+OK
+Time taken: 11.903 seconds
+Query ID = kiper_20250825002411_3b947a87-145c-4c5d-8cc3-2688e81d0b44
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2025-08-25 00:24:13,449 Stage-1 map = 100%,  reduce = 100%
+Ended Job = job_local1259822177_0002
+MapReduce Jobs Launched: 
+Stage-Stage-1:  HDFS Read: 227825332 HDFS Write: 302 SUCCESS
+Total MapReduce CPU Time Spent: 0 msec
+OK
+0	350683	4297	1	12202.153309399087	0	785	0.22	18810	230200	816	2181
+Time taken: 1.566 seconds, Fetched: 1 row(s)
+Query ID = kiper_20250825002413_ffd97232-97ca-4e97-9212-18a761902c44
+Total jobs = 2
+Launching Job 1 out of 2
+Number of reduce tasks not specified. Estimated from input data size: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2025-08-25 00:24:14,926 Stage-1 map = 100%,  reduce = 100%
+Ended Job = job_local712440759_0003
+Launching Job 2 out of 2
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2025-08-25 00:24:16,314 Stage-2 map = 100%,  reduce = 100%
+Ended Job = job_local1792259817_0004
+MapReduce Jobs Launched: 
+Stage-Stage-1:  HDFS Read: 227825468 HDFS Write: 302 SUCCESS
+Stage-Stage-2:  HDFS Read: 227825468 HDFS Write: 302 SUCCESS
+Total MapReduce CPU Time Spent: 0 msec
+OK
+0	350683.0	350683	350683	Night
+Time taken: 2.838 seconds, Fetched: 1 row(s)

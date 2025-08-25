@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-Mapper para contar requests por IP
+Mapper simple para contar requests por IpId
 Input: TSV EClog
-Output: ip \t 1
+Output: ip_id \t 1
 """
 import sys
 
@@ -21,8 +21,8 @@ for line in sys.stdin:
     
     try:
         fields = line.split('\t')
-        if len(fields) >= 10:
-            ip_id = fields[0].strip()  # IpId
+        if len(fields) >= 18:
+            ip_id = fields[0].strip()  # IpId es la primera columna (índice 0)
             if ip_id and ip_id != '-':
                 print(f"{ip_id}\t1")
     except Exception:

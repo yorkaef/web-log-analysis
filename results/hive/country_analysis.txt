@@ -3,12 +3,93 @@ SLF4J: Found binding in [jar:file:/opt/hive/lib/log4j-slf4j-impl-2.17.1.jar!/org
 SLF4J: Found binding in [jar:file:/home/kiper/hadoop/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
 SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
-Hive Session ID = caca68a5-6872-4e2d-80c8-8751bc315e54
+Hive Session ID = ae422a90-b1a7-4b38-acb4-48762d8b04ac
 
 Logging initialized using configuration in jar:file:/opt/hive/lib/hive-common-3.1.3.jar!/hive-log4j2.properties Async: true
-Hive Session ID = 873f0c95-dacc-40fb-9f25-6db57b1e4d8d
+Hive Session ID = b0357328-1e83-4568-a4eb-35141ea8b5ae
 OK
-Time taken: 0.764 seconds
+Time taken: 0.611 seconds
 OK
-Time taken: 0.085 seconds
-FAILED: SemanticException [Error 10001]: Line 21:5 Table not found 'eclog_processed'
+Time taken: 1.285 seconds
+Query ID = kiper_20250825002338_ad9fb535-8f49-44ed-a508-625da740c653
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks not specified. Estimated from input data size: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2025-08-25 00:23:43,557 Stage-1 map = 0%,  reduce = 0%
+2025-08-25 00:23:46,736 Stage-1 map = 100%,  reduce = 0%
+2025-08-25 00:23:48,750 Stage-1 map = 100%,  reduce = 100%
+Ended Job = job_local623237916_0001
+Moving data to directory hdfs://localhost:9001/user/hive/warehouse/eclog_analysis.db/country_stats
+MapReduce Jobs Launched: 
+Stage-Stage-1:  HDFS Read: 227825030 HDFS Write: 2357 SUCCESS
+Total MapReduce CPU Time Spent: 0 msec
+OK
+Time taken: 11.95 seconds
+Query ID = kiper_20250825002350_93ddb234-b774-4872-bf50-87d29f66a94d
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Job running in-process (local Hadoop)
+2025-08-25 00:23:51,804 Stage-1 map = 100%,  reduce = 100%
+Ended Job = job_local1448686976_0002
+MapReduce Jobs Launched: 
+Stage-Stage-1:  HDFS Read: 227829744 HDFS Write: 4714 SUCCESS
+Total MapReduce CPU Time Spent: 0 msec
+OK
+Poland	314549	3611	1	10086.933244105052	3172834765	0.16	253829	60718	2	64
+United States	18442	332	1	49033.082529009866	904268108	0.89	18077	325	40	14167
+Netherlands	6321	41	1	7132.445657332701	45084189	0.17	6317	3	1	6151
+Germany	5163	65	1	12338.128026341274	63701755	0.21	4757	406	0	661
+Canada	1117	5	1	5747.604297224709	6420074	0.00	906	211	0	601
+United Kingdom	853	34	1	17160.157092614303	14637614	0.12	836	17	0	3
+Other-CZ	725	9	1	11486.43172413793	8327663	0.28	546	179	0	2
+Other-NO	569	11	1	12992.112478031635	7392512	0.53	529	40	0	0
+Other-RO	563	4	1	8691.548845470692	4893342	0.00	522	41	0	0
+Other-UA	494	1	1	7725.5546558704455	3816424	0.20	494	0	0	494
+Other-IE	369	70	1	35507.271002710026	13102183	0.27	344	25	0	0
+France	316	14	1	24292.95253164557	7676573	0.32	280	36	0	18
+Other-VG	246	2	1	9287.130081300813	2284634	0.00	229	17	0	0
+Other-SE	245	9	1	22219.424489795918	5443759	0.00	229	16	0	0
+Other-RU	169	19	1	10774.75147928994	1820933	37.28	162	2	0	89
+Other-BY	104	4	1	19190.55769230769	1995818	0.00	102	2	0	0
+Other-SK	103	3	1	19678.087378640776	2026843	0.00	97	6	0	0
+Other-ES	88	3	1	17801.284090909092	1566513	0.00	65	23	0	0
+Other-IT	67	6	1	10646.955223880597	713346	1.49	62	5	0	1
+Other-AT	51	4	1	26229.882352941175	1337724	1.96	50	1	0	0
+Other-DK	50	2	1	12063.88	603194	0.00	48	2	0	0
+Other-CN	21	14	1	9608.0	201768	4.76	21	0	0	18
+Other-SG	17	2	1	50629.882352941175	860708	5.88	17	0	0	0
+Other-BE	6	5	1	258472.83333333334	1550837	0.00	6	0	0	0
+Other-LT	4	4	1	243948.75	975795	0.00	4	0	0	0
+Other-MX	4	4	1	138377.0	553508	0.00	4	0	0	0
+Other-IN	4	2	1	260286.5	1041146	0.00	4	0	0	0
+Other-AU	3	2	1	406039.6666666667	1218119	0.00	3	0	0	0
+Other-LK	3	1	1	218136.0	654408	0.00	3	0	0	0
+Other-EE	2	1	1	197.0	394	100.00	2	0	0	0
+Other-TW	2	1	1	172.0	344	100.00	0	0	0	0
+Other-PK	2	1	1	34550.5	69101	50.00	2	0	0	0
+Other-NK	1	1	1	172.0	172	100.00	0	0	0	0
+Other-IR	1	1	1	345066.0	345066	0.00	1	0	0	0
+Other-CO	1	1	1	213242.0	213242	0.00	1	0	0	0
+Other-JP	1	1	1	172.0	172	100.00	0	0	0	0
+Other-CM	1	1	1	64157.0	64157	0.00	1	0	0	0
+Other-CH	1	1	1	121891.0	121891	0.00	1	0	0	0
+Other-NZ	1	1	1	229028.0	229028	0.00	1	0	0	0
+Other-SI	1	1	1	6514.0	6514	0.00	1	0	0	0
+Other-VN	1	1	1	67434.0	67434	0.00	1	0	0	0
+Other-HU	1	1	1	731390.0	731390	0.00	1	0	0	0
+Other-FI	1	1	1	234569.0	234569	0.00	1	0	0	0
+Time taken: 1.666 seconds, Fetched: 43 row(s)

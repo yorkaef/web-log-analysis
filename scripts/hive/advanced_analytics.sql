@@ -8,21 +8,30 @@ CREATE TABLE user_sessions AS
 SELECT 
     user_id,
     ip_id,
-    COUNT(*) as requests_in_session,
-    COUNT(DISTINCT uri) as pages_visited,
-    MIN(timestamp) as session_start,
-    MAX(timestamp) as session_end,
-    -- Duración de sesión en minutos
-    (UNIX_TIMESTAMP(MAX(timestamp)) - UNIX_TIMESTAMP(MIN(timestamp))) / 60 as session_duration_minutes,
-    -- Análisis de navegación
-    SUM(CASE WHEN has_referrer = TRUE THEN 1 ELSE 0 END) as requests_with_referrer,
-    SUM(bytes) as total_data_transferred,
-    -- Errores en la sesión
-    SUM(CASE WHEN response_code >= 400 THEN 1 ELSE 0 END) as errors_in_session
-FROM eclog_processed
-WHERE user_id IS NOT NULL AND user_id != '-'
-GROUP BY user_id, ip_id
-HAVING COUNT(*) > 1;  -- Solo sesiones con múltiples requests
+    requests_in_session,
+    pages_visited,
+    session_start,
+    session_end,
+    (UNIX_TIMESTAMP(session_end) - UNIX_TIMESTAMP(session_start)) / 60 as session_duration_minutes,
+    requests_with_referrer,
+    total_data_transferred,
+    errors_in_session
+FROM (
+    SELECT 
+        user_id,
+        ip_id,
+        COUNT(*) as requests_in_session,
+        COUNT(DISTINCT uri) as pages_visited,
+        MIN(request_timestamp) as session_start,
+        MAX(request_timestamp) as session_end,
+        SUM(CASE WHEN has_referrer = TRUE THEN 1 ELSE 0 END) as requests_with_referrer,
+        SUM(bytes) as total_data_transferred,
+        SUM(CASE WHEN response_code >= 400 THEN 1 ELSE 0 END) as errors_in_session
+    FROM eclog_processed
+    WHERE user_id IS NOT NULL AND user_id != '-'
+    GROUP BY user_id, ip_id
+    HAVING COUNT(*) > 1
+) t;
 
 -- 5.2 Análisis de Páginas Más Populares
 DROP TABLE IF EXISTS popular_pages;
@@ -45,7 +54,7 @@ SELECT
     SUM(CASE WHEN is_bot = TRUE THEN 1 ELSE 0 END) as bot_visits,
     SUM(CASE WHEN is_bot = FALSE THEN 1 ELSE 0 END) as human_visits
 FROM eclog_processed
-WHERE http_method = 'GET'  -- Solo requests GET para páginas
+WHERE http_method = 'GET'
 GROUP BY uri
 ORDER BY page_views DESC
 LIMIT 50;
@@ -77,7 +86,7 @@ SELECT
     END as anomaly_type
 FROM eclog_processed
 GROUP BY ip_id, country
-HAVING COUNT(*) > 10  -- Solo IPs con actividad significativa
+HAVING COUNT(*) > 10
 ORDER BY total_requests DESC;
 
 -- 5.4 Análisis de Rendimiento del Servidor
@@ -85,12 +94,12 @@ DROP TABLE IF EXISTS server_performance;
 CREATE TABLE server_performance AS
 SELECT 
     hour,
-    date,
+    logdate,
     COUNT(*) as total_requests,
     AVG(bytes) as avg_response_size,
-    -- Latencia estimada (basada en tamaño de respuesta)
-    PERCENTILE_APPROX(bytes, 0.5) as median_response_size,
-    PERCENTILE_APPROX(bytes, 0.95) as p95_response_size,
+    -- Percentiles usando función compatible con Hive
+    percentile_approx(bytes, 0.5) as median_response_size,
+    percentile_approx(bytes, 0.95) as p95_response_size,
     -- Distribución de códigos de estado
     SUM(CASE WHEN response_code = 200 THEN 1 ELSE 0 END) as successful_requests,
     SUM(CASE WHEN response_code >= 400 AND response_code < 500 THEN 1 ELSE 0 END) as client_errors,
@@ -101,5 +110,5 @@ SELECT
     SUM(CASE WHEN resource_type = 'CSS' THEN bytes ELSE 0 END) as css_bytes,
     SUM(CASE WHEN resource_type = 'JavaScript' THEN bytes ELSE 0 END) as js_bytes
 FROM eclog_processed
-GROUP BY hour, date
-ORDER BY date, hour;
+GROUP BY hour, logdate
+ORDER BY logdate, hour;
