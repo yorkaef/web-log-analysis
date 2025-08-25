@@ -1,9 +1,8 @@
-# 🚀 Iniciar Hadoop + Hive + Análisis (PowerShell)
+# 🚀 Iniciar Hadoop + Hive + Análisis (WSL2)
 
-Una vez instalado y configurado **Hadoop** y **Hive**, sigue estos pasos:
-
+Una vez instalado y clonado el proyecto dentro de WSL2 y configurado **Hadoop** y **Hive**, sigue estos pasos:
 ```powershell
-# 1️⃣ Ingresar a WSL y abrir el proyecto
+# 1️⃣ Ingresar a WSL2 y abrir el proyecto
 wsl
 cd ~/web-log-analysis
 code .
