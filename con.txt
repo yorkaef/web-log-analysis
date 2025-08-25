@@ -6,6 +6,7 @@ code .
 hdfs namenode -format
 start-yarn.sh
 start-dfs.sh
+hive --service metastore & terminal aparte para hive
 jps
 source venv/bin/activate
 ./run_complete_analysis.sh para ejecutar
